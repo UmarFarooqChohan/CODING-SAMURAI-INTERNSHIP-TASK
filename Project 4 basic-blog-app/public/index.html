@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Blog Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Blog Dashboard</h2>
+      <ul>
+        <li><button id="allPostsBtn">All Posts</button></li>
+        <li><button id="addPostBtn">Add Post</button></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <header>
+        <h1>Posts Management</h1>
+        <input type="text" id="searchInput" placeholder="Search posts...">
+      </header>
+
+      <div id="postsContainer" class="posts-grid"></div>
+
+      <div class="pagination">
+        <button id="prevBtn">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">Next</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Add New Post</h2>
+      <input type="hidden" id="postId">
+      <input type="text" id="title" placeholder="Title">
+      <textarea id="content" rows="5" placeholder="Content"></textarea>
+      <button id="saveBtn">Save Post</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
